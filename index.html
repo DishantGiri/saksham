@@ -16,6 +16,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      padding: 10px; /* for small padding on mobile */
     }
 
     .form-container {
@@ -24,6 +25,7 @@
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.2);
       width: 340px;
+      max-width: 100%;
       transition: transform 0.3s ease;
     }
 
@@ -35,6 +37,7 @@
       text-align: center;
       margin-bottom: 1.5rem;
       color: #333;
+      font-size: 1.8rem;
     }
 
     input {
@@ -113,6 +116,44 @@
 
     .message.success {
       color: green;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 480px) {
+      .form-container {
+        width: 100%;
+        padding: 1.5rem 2rem;
+        box-shadow: none;
+        border-radius: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      input {
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+
+      button {
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+
+      .toggle-password {
+        font-size: 1rem;
+        right: 12px;
+      }
+
+      .toggle {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
